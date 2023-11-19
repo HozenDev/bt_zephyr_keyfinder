@@ -25,9 +25,9 @@ Simulation de services et caractéristiques d'un keyFinder sur une carte program
 
     Liste des bibliothèques utilisées :
 
-    - Bibliothèque Zephyr
-    - 
-    - 
+    - Bibliothèques standards C
+
+**** Zephyr
 
     Installation du framework Zephyr:
 
@@ -47,6 +47,32 @@ Créer un build pour l'application avec:
 - La configuration *prj.conf*
 Lancer la compilation (build).
 Flasher la carte *nRF52 DK*.
+
+** Utilisation
+*** Ajouter un service
+
+Chaque dossier dans =src= correspond à un service. Pour ajouter un service vous devez créer un dossier et l'ajouter dans le CMakeLists.txt en suivant l'exemple des autres dossiers.
+
+Pour aider à la création d'un service vous pouvez vous servir du service =src/template_service= qui regroupe et documente les principales fonctionnalités d'un service.
+
+*** System
+
+Le service =src/system= est le service regroupant les fonctionnalités systèmes. Vous retrouverez son interface dans le fichier =src/system/system.h=.
+
+**** Fonctionnalités
+
+- Caractéristique de Débug pour faciliter le développement
+- Version du sotfware
+- Advertising (Envoi de données publicitaires)
+
+*** IHM (Interface Homme-Machine)
+
+Le service =src/ihm= est le service regroupant les fonctionnalités d'interactions entre l'humain et l'objet. Vous retrouverez son interface dans le fichier =src/ihm/ihm.h=.
+
+**** Fonctionnalités
+
+- Appui du bouton 1 qui allume la led 1.
+- Appui du bouton pendant plus d'une seconde incrémente le niveau du buzzer de 10 (en %).
 
 ** Outils
 
@@ -76,8 +102,6 @@ Flasher la carte *nRF52 DK*.
   
 ** Licence
 
-- Apache License 2.0
-- 
-- 
+Zephyr est soumis à la licence *Apache License 2.0*
 
 
