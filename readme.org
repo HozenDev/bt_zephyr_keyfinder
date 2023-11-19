@@ -1,0 +1,93 @@
+* Emulation keyFinder sur nRF52 DK
+** Résumé
+
+Simulation de services et caractéristiques d'un keyFinder sur une carte programmable, la nRF52 DK. Vous trouverez ci-dessous le tableau récapitulatif des services ainsi que de leurs caractéristiques liées.
+
+*** Tableau des services
+
+#+caption: Tableau des services du keyFinder
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| Service | Caractéristique |   UUID | Format  | Taille    | Exemple            | R/W/N | Commentaires                          |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| System  |                 | 0x1400 |         |           |                    |       |                                       |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| System  | Version         | 0x1401 | String  | 16 octets | "1.0.0.0"          | R     |                                       |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| System  | Debug           | 0x1402 | String  | 50 octets | "version: 1.0.0.0" | R     |                                       |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| System  | Advertising     | 0x1403 | String  | 20 octets | "keyFinder"        | N     |                                       |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| IHM     |                 | 0x1410 |         |           |                    |       |                                       |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| IHM     | Bouton          | 0x1411 | Integer | 2 octet   | 2000               | R/W/N | Durée de l'appui (en ms)              |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| IHM     | Buzzer          | 0x1412 | Integer | 1 octet   | 10                 | R/W/N | Puissance (en %)                      |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+| IHM     | LED             | 0x1413 | Integer | 1 octet   | 1                  | R/W/N | 0: Eteinte                            |
+|         |                 |        |         |           |                    |       | 1: Allumée (continue)                 |
+|         |                 |        |         |           |                    |       | 2..x..255: Allumée x fois par seconde |
+|---------+-----------------+--------+---------+-----------+--------------------+-------+---------------------------------------|
+
+** Pour commencer
+*** Pré-requis :
+**** C (standard)
+
+    Liste des bibliothèques utilisées :
+
+    - Bibliothèque Zephyr
+    - 
+    - 
+
+    Installation du framework Zephyr:
+
+    - Installer *nRF Connect for Desktop* (Windows, Linux, MacOS)
+    - Installer *nRF Command Line Tools* (Windows, Linux, MacOS)
+    - Installer *VSCode* (Windows, Linux, MacOS)
+      - *Attention*: Les extensions nRF ne sont pas disponibles sur VSCodium ou Code OSS
+    - Installer les extensions nRF (5) sur *VSCode*
+    - Installer la Toolchain depuis *nRF Connect for Desktop*
+    - Installer la version 2.4.2 du SDK
+
+** Démarrage
+*** Windows
+
+Créer une application depuis le menu nRF Connect de VSCode puis copier les fichiers du répertoire à la racine.
+Créer un build pour l'application avec:
+- La board *nrf52dk_nrf80232*
+- La configuration *prj.conf*
+Lancer la compilation (build)
+Flasher la carte
+
+** Outils
+
+- VSCode
+- nRF Connect For Desktop
+- nRF Command Line Tools
+- nRF SDK v2.4.2
+- nRF Toolchain v2.4.2
+
+** Versions
+
+*Dernière version stable :* 1.0
+
+*Dernière version :* 1.0
+
+[[../../tags][Liste des versions]]
+
+** Auteurs
+*** Responsable de projet
+
+- PETIT Clément
+- MARCHAND Pierre
+
+*** Equipe de développement
+      
+- DUREL Enzo
+  
+** Licence
+
+Le projet est *open-source*
+
+
