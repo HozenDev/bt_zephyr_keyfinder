@@ -40,14 +40,13 @@ Simulation de services et caractéristiques d'un keyFinder sur une carte program
     - Installer la version 2.4.2 du SDK
 
 ** Démarrage
-*** Windows
 
 Créer une application depuis le menu nRF Connect de VSCode puis copier les fichiers du répertoire à la racine.
 Créer un build pour l'application avec:
 - La board *nrf52dk_nrf80232*
 - La configuration *prj.conf*
-Lancer la compilation (build)
-Flasher la carte
+Lancer la compilation (build).
+Flasher la carte *nRF52 DK*.
 
 ** Outils
 
@@ -77,6 +76,8 @@ Flasher la carte
   
 ** Licence
 
-Le projet est *open-source*
+- Apache License 2.0
+- 
+- 
 
 
