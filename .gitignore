@@ -1,0 +1,20 @@
+# ignore all
+/*
+
+# not ignore gitignore
+!/.gitignore
+
+# not ignore readme
+!/readme.org
+
+# not ignore congif files
+!/prj.conf
+!/CMakeLists.txt
+
+# not ignore src files
+!/src
+/src/*
+!/src/main.c
+!/src/template_service
+!/src/system
+!/src/ihm
