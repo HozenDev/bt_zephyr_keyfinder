@@ -27,9 +27,12 @@ Simulation de services et caractéristiques d'un keyFinder sur une carte program
 
     - Bibliothèques standards C
 
-**** Zephyr
+**** nRF SDK
 
-    Installation du framework Zephyr:
+    nRF SDK est basé sur le framework Zephyr
+
+    Lien Zephyr: https://github.com/zephyrproject-rtos/zephyr
+    Lien nRF SDK: https://github.com/nrfconnect/sdk-nrf
 
     - Installer *nRF Connect for Desktop* (Windows, Linux, MacOS)
     - Installer *nRF Command Line Tools* (Windows, Linux, MacOS)
@@ -64,7 +67,7 @@ Le service =src/system= est le service regroupant les fonctionnalités systèmes
 - Caractéristique de Débug pour faciliter le développement
 - Version du sotfware
 - Advertising (Envoi de données publicitaires)
-
+  
 *** IHM (Interface Homme-Machine)
 
 Le service =src/ihm= est le service regroupant les fonctionnalités d'interactions entre l'humain et l'objet. Vous retrouverez son interface dans le fichier =src/ihm/ihm.h=.
@@ -103,5 +106,6 @@ Le service =src/ihm= est le service regroupant les fonctionnalités d'interactio
 ** Licence
 
 Zephyr est soumis à la licence *Apache License 2.0*
+nRF SDK est soumis à la licence *LicenseRef-Nordic-5-Clause*
 
 
